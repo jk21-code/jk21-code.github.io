@@ -1,0 +1,359 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'><style type='text/css'>html {overflow-x: initial !important;}</style>
+<style type='text/css'  id="style-base">:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI Emoji", "SF Pro", sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p *, #write.first-line-indent svg * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-width: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-variant-alternates: inherit; font-variant-ligatures: inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant-position: inherit; font-variant-emoji: inherit; font-feature-settings: inherit; font-optical-sizing: inherit; font-variation-settings: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; position: relative; }
+#write svg h1, #write svg h2, #write svg h3, #write svg h4, #write svg h5, #write svg h6, #write svg p { position: static; white-space: nowrap; overflow: visible; }
+foreignObject { overflow: visible; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+li p { orphans: 1; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; border-right-style: none; border-right-color: currentcolor; background-color: inherit; }
+.CodeMirror-linenumber { -webkit-user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: medium; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: medium !important; border-style: none !important; border-color: currentcolor !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; border-bottom-style: none; border-bottom-color: currentcolor; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: medium; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.mermaid-svg { margin: auto; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left-width: 0.25em; border-left-style: solid; border-left-color: rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+</style>
+<link rel='stylesheet' href='https://github.com/jk21-code/jk21-code.github.io/V2025.10.1/vlook-geek.css' type='text/css' />
+<link rel='stylesheet' href='https://github.com/jk21-code/jk21-code.github.iogithub.com/jk21-code/jk21-code.github.io/github-io/V2025.10.1/fs-yuan-min.css' type='text/css' />
+<style type='text/css'  id="style-theme_css">
+@import '';
+@import '';
+</style>
+<style type='text/css'  id="style-lp">ol, ul {padding-left: 40px}</style>
+<style type='text/css'  id="style-mac-print"> @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="preconnect" href="https://openfonts.pages.dev" crossorigin="anonymous">
+<link rel="preconnect" href="https://madmaxchow.github.io" crossorigin="anonymous">
+<link rel="preconnect" href="https://github.com/jk21-code/jk21-code.github.io" crossorigin="anonymous">
+<!-- 补充 DNS 加速，防止 preconnect 被忽略 -->
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" "="">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<link rel="dns-prefetch" href="https://openfonts.pages.dev">
+<link rel="dns-prefetch" href="https://madmaxchow.github.io">
+<link rel="dns-prefetch" href="https://github.com/jk21-code/jk21-code.github.io">
+<!-- live 模式部署时相关资源 URL 配置 -->
+<meta name="vlook-js" content="https://github.com/jk21-code/jk21-code.github.io/V2025.10.1/">
+<meta name="vlook-fs" content="https://github.com/jk21-code/jk21-code.github.io/V2025.10.1/">
+<!-- 以下为 W3C 相关的 meta 配置 -->
+<meta name="author" content="">
+<meta name="date" content="">
+<meta name="changelog" content="">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<!-- 以下为 VLOOK™ 相关的 meta 配置 -->
+<meta name="vlook-doc-lib" content="">
+<meta name="vlook-gray-mode" content="">
+<meta name="vlook-header-autonum" content="">
+<meta name="vlook-header-dup" content="">
+<meta name="vlook-image-host" content="">
+<meta name="vlook-query" content="">
+<meta name="vlook-unpub" content="">
+<meta name="vlook-welcome" content="">
+<meta name="vlook-cc-top-left" content="">
+<meta name="vlook-cc-top-right" content="">
+<meta name="vlook-cc-bottom-left" content="">
+<meta name="vlook-cc-bottom-right" content="">
+<!-- 以下为 Open Graph Protocol (OGP) 相关的 meta 配置 -->
+<meta property="og:image" content="">
+<meta property="og:image:alt" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<meta property="og:url" content="">
+<meta property="og:type" content="">
+<meta property="og:site_name" content="">
+<meta property="og:locale" content="">
+<meta property="og:video" content="">
+<meta property="og:audio" content="">
+
+<!--========================================================================-->
+<!--                                                                        -->
+<!--                          VLOOK - Typora Plugin                         -->
+<!--                                ( live )                                -->
+<!--                                                                        -->
+<!--                                  V2025.10.1                                 -->
+<!--                               2025-10-18                               -->
+<!--                           Powered by MAX°孟兆                           -->
+<!--                                                                        -->
+<!--                          QQ Group: 805502564                           -->
+<!--                  Telegram Channel: t.me/vlook_markdown                 -->
+<!--                         email: maxchow@qq.com                          -->
+<!--                                                                        -->
+<!--                  https://github.com/MadMaxChow/VLOOK                   -->
+<!--                  https://gitee.com/madmaxchow/VLOOK                    -->
+<!--                                                                        -->
+<!--========================================================================-->
+<!--
+MIT License
+Copyright (c) 2016-2022 MAX°DESIGN | Max Chow
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+<!-- ==================== VLOOK UI ==================== -->
+<!-- <div class="v-vlook-inside"></div> -->
+<style type="text/css">
+    @keyframes breathe-vlook { 0% { transform: scale(1.5); opacity: 0.5; } 100% { transform: scale(1); opacity: 1; } }
+    #VLOOK { left: 0; top: 0; background: var(--v-btn-bg); width: 100%; height: 100vh; display: flex; align-items: center; position: fixed; z-index: 99999; }
+    #VLOOK > div { margin: 0 auto; background: var(--v-btn-f); width: 30px; height: 30px; border-radius: 10px; animation: 1s breathe-vlook infinite alternate; }
+</style>
+<!-- ==================== VLOOK JS ==================== -->
+<script type="text/javascript" defer="">
+	function getMetaContent(key, attr = "name") {
+		const meta = document.querySelector(`meta[${attr}="${key}"]`);
+		return meta ? meta.getAttribute("content") : null;
+	}
+    let lVer = "V2025.10.1",
+        devMode = lVer.indexOf("dev") > 0 ? true : false, debugMode = devMode,
+        // cssHost = devMode ? "http://localhost/dev/" : getMetaContent("vlook-res-css"),
+        jsHost = devMode ? "http://localhost/dev/" : getMetaContent("vlook-js") + lVer + "/";
+// ==================== NON-standalone ====================
+// ▽ ▽ ▽ ▽ ▽
+    let ts = Math.floor(Date.now()/(1000*60*60*24)); // (1000*60*60*24) 按天
+        jqueryJS =  document.createElement("script"),
+        startJS = document.createElement("script");
+
+    jqueryJS.type = "text/javascript";
+    jqueryJS.src = jsHost + "jquery.js?ts=" + ts;
+    jqueryJS.defer = true;
+    document.getElementsByTagName("HEAD")[0].appendChild(jqueryJS);
+
+    if (devMode) {
+	    let jqueryMigrateJS =  document.createElement("script");
+    	jqueryMigrateJS.type = "text/javascript";
+	    jqueryMigrateJS.src = jsHost + "jquery-migrate.js?ts=" + ts;
+	    jqueryMigrateJS.defer = true;
+    	document.getElementsByTagName("HEAD")[0].appendChild(jqueryMigrateJS);
+    }
+
+    startJS.type = "text/javascript";
+    startJS.src = jsHost + "start.js?ts=" + ts;
+    startJS.crossOrigin = "anonymous";
+    startJS.defer = true;
+    document.getElementsByTagName("HEAD")[0].appendChild(startJS);
+</script>
+<!--======================================-->
+<!-- END • VLOOK plugin_live for <head /> -->
+<!--======================================-->
+
+<title>ICLR 2026 Rebuttal 核心策略与清单</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='iclr-2026-rebuttal-核心策略与清单'><span>ICLR 2026 Rebuttal 核心策略与清单</span></h1><h2 id='核心策略'><strong><span>核心策略</span></strong></h2><ul><li><p><strong><span>态度诚恳，积极回应</span></strong><span>: 首先感谢审稿人的宝贵意见。</span></p></li><li><p><strong><span>结构清晰，主次分明</span></strong><span>: 采用“总体回应 + 主题分类回应 + 逐点回应”的结构。</span></p></li><li><p><strong><span>抓住关键，说服中间派</span></strong><span>: 重点目标是说服 </span><strong><span>Reviewer A8NT (评分 4)</span></strong><span>，同时巩固 </span><strong><span>Reviewer LVMN (评分 6)</span></strong><span> 的信心，并有力回应 </span><strong><span>Reviewer pyrj (评分 2)</span></strong><span> 的核心质疑。</span></p></li></ul><hr /><h2 id='第一部分总体陈述-general-response'><strong><span>第一部分：总体陈述 (General Response)</span></strong></h2><blockquote><p><span>我们衷心感谢各位审稿人对我们工作的细致审阅和提出的深刻见解。这些宝贵的意见对提升我们的论文质量至关重要。根据审稿人的反馈，我们计划对论文进行以下重大修订：</span></p><ol start='' ><li><p><strong><span>澄清与强调核心创新</span></strong><span>: 重写引言和方法部分，明确阐述我们的NeuroAlign框架，特别是其三大核心模块 (VSE, SGA, DLA) 如何协同工作，并详细对比我们与CLIP-MUSED等先前工作的本质区别，凸显独特的贡献。</span></p></li><li><p><strong><span>补充关键实验与分析</span></strong><span>: 回复中加入审稿人建议的</span><strong><span>关键消融实验</span></strong><span>（特别是针对SGA模块），修正并澄清UBP基准的对比结果，并增加与相关机制（如Fovea Blur）的讨论。</span></p></li><li><p><strong><span>提升方法论清晰度</span></strong><span>: 修改方法论描述中的歧义和逻辑矛盾，例如澄清“低级特征”与“高频细节”的区别，并完善所有公式、定义和引用的准确性。</span></p></li></ol></blockquote><hr /><h2 id='第二部分核心问题集中回应-thematic-responses'><strong><span>第二部分：核心问题集中回应 (Thematic Responses)</span></strong></h2><h3 id='创新性与贡献-novelty--contribution'><span>创新性与贡献 (Novelty &amp; Contribution)</span></h3><ul><li><p><strong><span>问题</span></strong><span>: </span><strong><span>Reviewer pyrj</span></strong><span> 认为贡献有限，核心的语义引导策略与 </span><strong><span>CLIP-MUSED (ICLR 2024)</span></strong><span> 类似。</span><strong><span>Reviewer A8NT</span></strong><span> 指出设计与 </span><strong><span>Choi et al.</span></strong><span> 的双流模型相似。</span></p></li><li><p><strong><span>回复思路</span></strong><span>:</span></p><ul><li><p><span>区分 CLIP-MUSED: 强调动机、机制和框架整合度的本质不同。</span></p></li><li><p><span>回应 Choi et al.: 承认相似性是设计的灵感来源，强调我们的贡献在于将神经科学理论</span><strong><span>首次具体化、可操作化</span></strong><span>地实现为一个有效的计算框架。</span></p></li></ul></li></ul><blockquote><p><strong><span>对 CLIP-MUSED 的回应</span></strong><span>:</span>
+<span>&quot;感谢审稿人指出 CLIP-MUSED 这项重要的相关工作。我们承认其工作的相关性，但我们的 SGA 模块在</span><em><span>动机、机制和实现</span></em><span>上均与其存在本质区别：</span></p><ol start='' ><li><p><strong><span>引导机制不同</span></strong><span>: CLIP-MUSED 采用教师模型进行特征蒸馏，而我们的 SGA 模块利用预训练视觉-语言模型动态构建&#39;语义先验&#39;相似度分布 (P)，并使用 </span><strong><span>KL 散度</span></strong><span>引导 EEG-Image 相似度分布 (Q) 去拟合。这是一种更&#39;软性&#39;的、基于分布的引导。</span></p></li><li><p><strong><span>框架整合度不同</span></strong><span>: 我们的核心贡献在于这个</span><strong><span>受神经科学启发的、三位一体的协同框架</span></strong><span> (VSE + SGA + DLA)，它系统性地解决了从生理特征失配到底层语义一致性，再到动态任务平衡的三个连续挑战。这是单一改进方法所不具备的系统性视角。</span>
+<span>我们将在相关工作部分明确加入与 CLIP-MUSED 的详细对比。&quot;</span></p></li></ol><p><strong><span>对 Choi et al. 的回应</span></strong><span>:</span>
+<span>&quot;审稿人观察到我们的设计与神经科学中的双流模型（如Choi et al.的研究）相似，这正是我们设计的出发点。我们的创新之处在于，</span><strong><span>首次将这一高级别的神经科学理论具体化、可操作化地实现为一个计算框架</span></strong><span>，并成功应用于极具挑战性的 EEG 视觉解码任务。具体来说，我们将‘自下而上’通路模拟为 </span><strong><span>VSE</span></strong><span> 模块，将‘自上而下’的语义调制模拟为 </span><strong><span>SGA</span></strong><span> 和 </span><strong><span>DLA</span></strong><span> 模块。&quot;</span></p></blockquote><h3 id='关键问题实验评估的充分性与严谨性-experimental-rigor'><span>【关键问题】实验评估的充分性与严谨性 (Experimental Rigor)</span></h3><ul><li><p><strong><span>问题</span></strong><span>:</span></p><ol start='' ><li><p><span>(</span><strong><span>Reviewer A8NT</span></strong><span>) 论文报告的 UBP 基准结果与官方不一致。</span></p></li><li><p><span>(</span><strong><span>Reviewer A8NT, LVMN</span></strong><span>) 缺少关键的消融实验（特别是对 SGA 模块）。</span></p></li><li><p><span>(</span><strong><span>Reviewer pyrj</span></strong><span>) 仅在检索任务上评估，而未在图像重建任务上评估。</span></p></li></ol></li><li><p><strong><span>回复思路</span></strong><span>:</span></p><ol start='' ><li><p><strong><span>承认并纠正</span></strong><span>: 必须核实并承认错误，承诺使用官方数据进行对比，并为疏忽道歉。</span></p></li><li><p><strong><span>补充实验</span></strong><span>: 立即进行消融实验，在 Rebuttal 中给出结果。</span></p></li><li><p><strong><span>合理解释</span></strong><span>: 解释为何聚焦于检索任务，并将其余任务列为未来工作。</span></p></li></ol></li></ul><blockquote><p><strong><span>对 UBP 基准不一致的回应</span></strong><span>:</span>
+<span>&quot;我们非常感谢审稿人敏锐地指出了 UBP 基准结果的不一致性。经过我们再次的仔细核查，我们发现[</span><strong><span>选择一个原因，例如：我们在复现时采用的评估代码有细微差别</span></strong><span>]。为了保证绝对的公平和严谨，我们将在修订版中</span><strong><span>直接使用官方 benchmark 报告的 Top-1=50.9, Top-5=79.7 进行对比</span></strong><span>，并重新计算我们的相对提升。我们为这个疏忽深表歉意，并感谢审稿人帮助我们纠正了这个问题。&quot;</span></p><p><strong><span>对缺少消融实验的回应</span></strong><span>:</span>
+<span>&quot;我们完全同意审稿人的观点，并已经</span><strong><span>完成了额外的消融实验</span></strong><span>。结果表明，当移除 SGA 模块后，模型的性能出现了显著下降 (Top-1 准确率从 X% 降至 Y%)，这有力地证明了我们语义引导机制的有效性。我们将在论文的实验部分加入完整的消融研究表格和分析。&quot;</span></p><p><strong><span>对仅有检索任务的回应</span></strong><span>:</span>
+<span>&quot;我们选择将研究重点放在</span><strong><span>检索 (retrieval) 任务</span></strong><span>，是因为它能最直接地评估模型对齐高层语义信息的能力，与我们工作的核心目标高度相关。虽然图像重建是一个有价值的方向，但它通常需要不同的模型架构。我们相信将一个任务做到极致更能凸显我们框架的优势，并将在结论部分将图像重建列为未来工作。&quot;</span></p></blockquote><h3 id='重要问题方法论的清晰度与动机矛盾-methodological-clarity'><span>【重要问题】方法论的清晰度与动机矛盾 (Methodological Clarity)</span></h3><ul><li><p><strong><span>问题</span></strong><span>: </span><strong><span>Reviewer A8NT</span></strong><span> 指出引言中关于对齐“低级特征”和避免“高频细节”过拟合的说法存在潜在矛盾。</span></p></li><li><p><strong><span>回复思路</span></strong><span>: 精确地区分两个概念，澄清 VSE 模块的真正作用。</span></p></li></ul><blockquote><p><strong><span>对“低级特征”与“高频细节”矛盾的回应</span></strong><span>:</span>
+<span>&quot;这是一个非常深刻的问题，揭示了我们原文中表述的不精确之处。我们在此澄清：我们的本意是区分</span><strong><span>&#39;有生理学意义的低级视觉特征&#39;</span></strong><span> (如边缘、颜色、纹理) 和 </span><strong><span>&#39;像素级的高频噪声&#39;</span></strong><span> (对人类感知无意义的像素伪影)。早期EEG响应主要编码前者。直接用原始RGB图像对齐，模型易过拟合到后者。我们的 </span><strong><span>VSE 模块旨在提取前者，同时抑制后者</span></strong><span>，从而实现更符合生理机制的对齐。我们将在论文中重写相关段落以精确阐述这一区别。&quot;</span></p></blockquote><hr /><h2 id='第三部分逐点问题回答-point-by-point-responses'><strong><span>第三部分：逐点问题回答 (Point-by-Point Responses)</span></strong></h2><h3 id='to-reviewer-pyrj'><strong><span>To Reviewer pyrj:</span></strong></h3><ol start='' ><li><p><strong><span>关于动态损失权重策略如何解决 Bottleneck 3</span></strong><span>:</span></p><ul><li><p><strong><span>回应</span></strong><span>: DLA 策略通过在训练早期更侧重于基础的图文对齐 (</span><code>L_IT</code><span>)，后期逐渐增加对更精细的脑-图对齐 (</span><code>L_EI</code><span>) 和语义引导 (</span><code>L_SG</code><span>) 的权重，模拟了从一般到具体的认知过程，从而动态地利用了语义先验，而非静态地强制对齐。</span></p></li></ul></li></ol><h3 id='to-reviewer-a8nt'><strong><span>To Reviewer A8NT:</span></strong></h3><ol start='' ><li><p><strong><span>关于 Figure 1 解剖学术语的贡献</span></strong><span>:</span></p><ul><li><p><strong><span>回应</span></strong><span>: 我们将在图注中明确解释 PFC (自上而下注意)、LGN (中继站)、PPC (空间注意) 在双流模型中扮演的角色，以及它们如何分别启发了我们的 SGA、特征传递和 VSE 模块的设计。</span></p></li></ul></li><li><p><strong><span>关于 Center-surround Antagonism 的动机</span></strong><span>:</span></p><ul><li><p><strong><span>回应</span></strong><span>: 我们将补充解释，该机制能增强图像的前景-背景分离，模拟视觉系统在注意力集中时对核心对象进行增强处理的过程，这对于提取与物体识别最相关的特征至关重要。</span></p></li></ul></li><li><p><strong><span>关于可视化 R_a 和 I_a</span></strong><span>:</span></p><ul><li><p><strong><span>回应</span></strong><span>: 同意。我们将在附录中加入 VSE 模块的可视化结果，直观展示其如何聚焦于图像的显著区域。</span></p></li></ul></li><li><p><strong><span>关于 E_d 的定义等细节问题</span></strong><span>:</span></p><ul><li><p><strong><span>回应</span></strong><span>: 感谢指正，我们将逐一检查并修正论文中的所有公式、定义和引文格式错误。</span></p></li></ul></li></ol><h3 id='to-reviewer-lvmn'><strong><span>To Reviewer LVMN:</span></strong></h3><ol start='' ><li><p><strong><span>关于补充更多消融实验</span></strong><span>:</span></p><ul><li><p><strong><span>回应</span></strong><span>: 再次感谢您的建议。如上文所述，我们已经完成了这些实验，并将在修订版中详细呈现，以进一步增强我们结论的可靠性。</span></p></li></ul></li><li><p><strong><span>关于 DLA 权重变化曲线</span></strong><span>:</span></p><ul><li><p><strong><span>回应</span></strong><span>: 这是一个非常好的建议。我们将在附录中补充 DLA 权重 (w1, w2, w3) 在训练过程中的变化曲线图，以展示模型的自适应学习过程。</span></p></li></ul></li></ol></div></div>
+</body>
+</html>
