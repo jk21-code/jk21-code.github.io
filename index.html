@@ -1,59 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-  <meta charset='UTF-8'>
-  <meta name='viewport' content='width=device-width initial-scale=1'>
-  <title>ICLR 2026 Rebuttal 核心策略与清单</title>
-
-  <!-- VLOOK-Styler -->
-  <link rel='stylesheet' href='https://vlook.gitee.io/VLOOK/V2025.10.1/vlook-geek.css' type='text/css' />
-  <link rel='stylesheet' href='https://vlook.gitee.io/VLOOK/V2025.10.1/fs-yuan-min.css' type='text/css' />
-
-  <!-- VLOOK-Live -->
-  <!-- live 模式部署时相关资源 URL 配置 -->
-  <meta name="vlook-js" content="https://vlook.gitee.io/VLOOK/">
-  <meta name="vlook-css" content="https://vlook.gitee.io/VLOOK/">
-
-  <!-- 以下为 VLOOK™ 相关的 meta 配置 -->
-  <meta name="vlook-doc-lib" content="">
-  <meta name="vlook-gray-mode" content="">
-  <meta name="vlook-header-autonum" content="">
-  <meta name="vlook-header-dup" content="">
-  <meta name="vlook-image-host" content="">
-  <meta name="vlook-query" content="">
-  <meta name="vlook-unpub" content="">
-  <meta name="vlook-welcome" content="">
-
-  <!--======================================-->
-  <!-- VLOOK plugin_live for <head /> -->
-  <!--======================================-->
-  <script type="text/javascript" defer="">
-      function getMetaContent(key, attr = "name") {
-          const meta = document.querySelector(`meta[${attr}="${key}"]`);
-          return meta ? meta.getAttribute("content") : null;
-      }
-      let lVer = "V2025.10.1",
-          devMode = lVer.indexOf("dev") > 0 ? true : false, debugMode = devMode,
-          jsHost = devMode ? "http://localhost/dev/" : getMetaContent("vlook-js") + lVer + "/";
-      let ts = Math.floor(Date.now()/(1000*60*60*24));
-          jqueryJS =  document.createElement("script"),
-          startJS = document.createElement("script");
-      jqueryJS.type = "text/javascript";
-      jqueryJS.src = jsHost + "jquery.js?ts=" + ts;
-      jqueryJS.defer = true;
-      document.getElementsByTagName("HEAD")[0].appendChild(jqueryJS);
-      if (devMode) {
-          let jqueryMigrateJS =  document.createElement("script");
-          jqueryMigrateJS.type = "text/javascript";
-          jqueryMigrateJS.src = jsHost + "jquery-migrate.js?ts=" + ts;
-          jqueryMigrateJS.defer = true;
-          document.getElementsByTagName("HEAD")[0].appendChild(jqueryMigrateJS);
-      }
-      startJS.type = "text/javascript";
-      startJS.src = jsHost + "start.js?ts=" + ts;
-      startJS.crossOrigin = "anonymous";
-      startJS.defer = true;
-      document.getElementsByTagName("HEAD")[0].appendChild(startJS);
-  </script>
-  <!--======================================-->
-  <!-- END • VLOOK plugin_live for <head /> -->
-  <!--======================================-->
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
 </head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset='UTF-8'&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name='viewport' content='width=device-width initial-scale=1'&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- ★★★ 1. 修改为你自己的页面标题 ★★★ --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;ICLR 2026 Rebuttal 核心策略与清单&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- VLOOK-Styler (这是官方 CDN 链接，请勿修改) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel='stylesheet' href='https://vlook.gitee.io/VLOOK/V2025.10.1/vlook-geek.css' type='text/css' /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel='stylesheet' href='https://vlook.gitee.io/VLOOK/V2025.10.1/fs-yuan-min.css' type='text/css' /&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- VLOOK-Live (这是官方 CDN 链接，请勿修改) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="vlook-js" content="https://vlook.gitee.io/VLOOK/"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="vlook-css" content="https://vlook.gitee.io/VLOOK/"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!--======================================--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- VLOOK plugin_live for &lt;head /&gt; (这是官方脚本，请勿修改) --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!--======================================--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script type="text/javascript" defer=""&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function getMetaContent(key, attr = "name") {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const meta = document.querySelector(`meta[${attr}="${key}"]`);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return meta ? meta.getAttribute("content") : null;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let lVer = "V2025.10.1",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>devMode = lVer.indexOf("dev") &gt; 0 ? true : false, debugMode = devMode,</p>
+<p class="p1"><span class="Apple-converted-space">            </span>jsHost = devMode ? "http://localhost/dev/" : getMetaContent("vlook-js") + lVer + "/";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let ts = Math.floor(Date.now()/(1000*60*60*24));</p>
+<p class="p1"><span class="Apple-converted-space">            </span>jqueryJS =<span class="Apple-converted-space">  </span>document.createElement("script"),</p>
+<p class="p1"><span class="Apple-converted-space">            </span>startJS = document.createElement("script");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>jqueryJS.type = "text/javascript";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>jqueryJS.src = jsHost + "jquery.js?ts=" + ts;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>jqueryJS.defer = true;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementsByTagName("HEAD")[0].appendChild(jqueryJS);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (devMode) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let jqueryMigrateJS =<span class="Apple-converted-space">  </span>document.createElement("script");</p>
+<p class="p1"><span class="Apple-converted-space">            </span>jqueryMigrateJS.type = "text/javascript";</p>
+<p class="p1"><span class="Apple-converted-space">            </span>jqueryMigrateJS.src = jsHost + "jquery-migrate.js?ts=" + ts;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>jqueryMigrateJS.defer = true;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementsByTagName("HEAD")[0].appendChild(jqueryMigrateJS);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>startJS.type = "text/javascript";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>startJS.src = jsHost + "start.js?ts=" + ts;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>startJS.crossOrigin = "anonymous";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>startJS.defer = true;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementsByTagName("HEAD")[0].appendChild(startJS);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!--======================================--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- END • VLOOK plugin_live for &lt;head /&gt; --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!--======================================--&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;!-- ★★★ 2. 将你自己的 HTML 内容粘贴到这里 ★★★ --&gt;</p>
+<p class="p1">&lt;body class='typora-export'&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class='typora-export-content'&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id='write' class=''&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- ↓↓↓↓ 从这里开始，是你自己用 Typora 导出的内容 ↓↓↓↓ --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 id='iclr-2026-rebuttal-核心策略与清单'&gt;&lt;span&gt;ICLR 2026 Rebuttal 核心策略与清单&lt;/span&gt;&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 id='核心策略'&gt;&lt;strong&gt;&lt;span&gt;核心策略&lt;/span&gt;&lt;/strong&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;&lt;span&gt;态度诚恳，积极回应&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;: 首先感谢审稿人的宝贵意见。&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;&lt;span&gt;结构清晰，主次分明&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;: 采用“总体回应 + 主题分类回应 + 逐点回应”的结构。&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;&lt;span&gt;抓住关键，说服中间派&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;: 重点目标是说服 &lt;/span&gt;&lt;strong&gt;&lt;span&gt;Reviewer A8NT (评分 4)&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;，同时巩固 &lt;/span&gt;&lt;strong&gt;&lt;span&gt;Reviewer LVMN (评分 6)&lt;/span&gt;&lt;/strong&gt;&lt;span&gt; 的信心，并有力回应 &lt;/span&gt;&lt;strong&gt;&lt;span&gt;Reviewer pyrj (评分 2)&lt;/span&gt;&lt;/strong&gt;&lt;span&gt; 的核心质疑。&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;hr /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 id='第一部分总体陈述-general-response'&gt;&lt;strong&gt;&lt;span&gt;第一部分：总体陈述 (General Response)&lt;/span&gt;&lt;/strong&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;span&gt;我们衷心感谢各位审稿人对我们工作的细致审阅和提出的深刻见解。这些宝贵的意见对提升我们的论文质量至关重要。根据审稿人的反馈，我们计划对论文进行以下重大修订：&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;ol start=''&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;&lt;strong&gt;&lt;span&gt;澄清与强调核心创新&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;: 重写引言和方法部分，明确阐述我们的NeuroAlign框架，特别是其三大核心模块 (VSE, SGA, DLA) 如何协同工作，并详细对比我们与CLIP-MUSED等先前工作的本质区别，凸显独特的贡献。&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;&lt;strong&gt;&lt;span&gt;补充关键实验与分析&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;: 回复中加入审稿人建议的&lt;/span&gt;&lt;strong&gt;&lt;span&gt;关键消融实验&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;（特别是针对SGA模块），修正并澄清UBP基准的对比结果，并增加与相关机制（如Fovea Blur）的讨论。&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;&lt;strong&gt;&lt;span&gt;提升方法论清晰度&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;: 修改方法论描述中的歧义和逻辑矛盾，例如澄清“低级特征”与“高频细节”的区别，并完善所有公式、定义和引用的准确性。&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ol&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- ... 这里省略了您剩余的 HTML 内容，请确保它们都在这里 ... --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- 例如，您提供的 HTML 文件中到 &lt;/html&gt; 之前的所有内容都应该在这里 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 id='第二部分核心问题集中回应-thematic-responses'&gt;&lt;strong&gt;&lt;span&gt;第二部分：核心问题集中回应 (Thematic Responses)&lt;/span&gt;&lt;/strong&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h3 id='创新性与贡献-novelty--contribution'&gt;&lt;span&gt;创新性与贡献 (Novelty &amp;amp; Contribution)&lt;/span&gt;&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;&lt;span&gt;问题&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;: &lt;/span&gt;&lt;strong&gt;&lt;span&gt;Reviewer pyrj&lt;/span&gt;&lt;/strong&gt;&lt;span&gt; 认为贡献有限，核心的语义引导策略与 &lt;/span&gt;&lt;strong&gt;&lt;span&gt;CLIP-MUSED (ICLR 2024)&lt;/span&gt;&lt;/strong&gt;&lt;span&gt; 类似。&lt;/span&gt;&lt;strong&gt;&lt;span&gt;Reviewer A8NT&lt;/span&gt;&lt;/strong&gt;&lt;span&gt; 指出设计与 &lt;/span&gt;&lt;strong&gt;&lt;span&gt;Choi et al.&lt;/span&gt;&lt;/strong&gt;&lt;span&gt; 的双流模型相似。&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;&lt;strong&gt;&lt;span&gt;回复思路&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;:&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p&gt;&lt;span&gt;区分 CLIP-MUSED: 强调动机、机制和框架整合度的本质不同。&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p&gt;&lt;span&gt;回应 Choi et al.: 承认相似性是设计的灵感来源，强调我们的贡献在于将神经科学理论&lt;/span&gt;&lt;strong&gt;&lt;span&gt;首次具体化、可操作化&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;地实现为一个有效的计算框架。&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;&lt;span&gt;对 CLIP-MUSED 的回应&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;:&lt;/span&gt; &lt;span&gt;&amp;quot;感谢审稿人指出 CLIP-MUSED 这项重要的相关工作。我们承认其工作的相关性，但我们的 SGA 模块在&lt;/span&gt;&lt;em&gt;&lt;span&gt;动机、机制和实现&lt;/span&gt;&lt;/em&gt;&lt;span&gt;上均与其存在本质区别：&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;ol start=''&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;&lt;strong&gt;&lt;span&gt;引导机制不同&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;: CLIP-MUSED 采用教师模型进行特征蒸馏，而我们的 SGA 模块利用预训练视觉-语言模型动态构建&amp;#39;语义先验&amp;#39;相似度分布 (P)，并使用 &lt;/span&gt;&lt;strong&gt;&lt;span&gt;KL 散度&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;引导 EEG-Image 相似度分布 (Q) 去拟合。这是一种更&amp;#39;软性&amp;#39;的、基于分布的引导。&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p&gt;&lt;strong&gt;&lt;span&gt;框架整合度不同&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;: 我们的核心贡献在于这个&lt;/span&gt;&lt;strong&gt;&lt;span&gt;受神经科学启发的、三位一体的协同框架&lt;/span&gt;&lt;/strong&gt;&lt;span&gt; (VSE + SGA + DLA)，它系统性地解决了从生理特征失配到底层语义一致性，再到动态任务平衡的三个连续挑战。这是单一改进方法所不具备的系统性视角。&lt;/span&gt; &lt;span&gt;我们将在相关工作部分明确加入与 CLIP-MUSED 的详细对比。&amp;quot;&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/ol&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;&lt;span&gt;对 Choi et al. 的回应&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;:&lt;/span&gt; &lt;span&gt;&amp;quot;审稿人观察到我们的设计与神经科学中的双流模型（如Choi et al.的研究）相似，这正是我们设计的出发点。我们的创新之处在于，&lt;/span&gt;&lt;strong&gt;&lt;span&gt;首次将这一高级别的神经科学理论具体化、可操作化地实现为一个计算框架&lt;/span&gt;&lt;/strong&gt;&lt;span&gt;，并成功应用于极具挑战性的 EEG 视觉解码任务。具体来说，我们将‘自下而上’通路模拟为 &lt;/span&gt;&lt;strong&gt;&lt;span&gt;VSE&lt;/span&gt;&lt;/strong&gt;&lt;span&gt; 模块，将‘自上而下’的语义调制模拟为 &lt;/span&gt;&lt;strong&gt;&lt;span&gt;SGA&lt;/span&gt;&lt;/strong&gt;&lt;span&gt; 和 &lt;/span&gt;&lt;strong&gt;&lt;span&gt;DLA&lt;/span&gt;&lt;/strong&gt;&lt;span&gt; 模块。&amp;quot;&lt;/span&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/blockquote&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- ... 您剩余的内容 ... --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
