@@ -1,0 +1,59 @@
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width initial-scale=1'>
+  <title>ICLR 2026 Rebuttal 核心策略与清单</title>
+
+  <!-- VLOOK-Styler -->
+  <link rel='stylesheet' href='https://vlook.gitee.io/VLOOK/V2025.10.1/vlook-geek.css' type='text/css' />
+  <link rel='stylesheet' href='https://vlook.gitee.io/VLOOK/V2025.10.1/fs-yuan-min.css' type='text/css' />
+
+  <!-- VLOOK-Live -->
+  <!-- live 模式部署时相关资源 URL 配置 -->
+  <meta name="vlook-js" content="https://vlook.gitee.io/VLOOK/">
+  <meta name="vlook-css" content="https://vlook.gitee.io/VLOOK/">
+
+  <!-- 以下为 VLOOK™ 相关的 meta 配置 -->
+  <meta name="vlook-doc-lib" content="">
+  <meta name="vlook-gray-mode" content="">
+  <meta name="vlook-header-autonum" content="">
+  <meta name="vlook-header-dup" content="">
+  <meta name="vlook-image-host" content="">
+  <meta name="vlook-query" content="">
+  <meta name="vlook-unpub" content="">
+  <meta name="vlook-welcome" content="">
+
+  <!--======================================-->
+  <!-- VLOOK plugin_live for <head /> -->
+  <!--======================================-->
+  <script type="text/javascript" defer="">
+      function getMetaContent(key, attr = "name") {
+          const meta = document.querySelector(`meta[${attr}="${key}"]`);
+          return meta ? meta.getAttribute("content") : null;
+      }
+      let lVer = "V2025.10.1",
+          devMode = lVer.indexOf("dev") > 0 ? true : false, debugMode = devMode,
+          jsHost = devMode ? "http://localhost/dev/" : getMetaContent("vlook-js") + lVer + "/";
+      let ts = Math.floor(Date.now()/(1000*60*60*24));
+          jqueryJS =  document.createElement("script"),
+          startJS = document.createElement("script");
+      jqueryJS.type = "text/javascript";
+      jqueryJS.src = jsHost + "jquery.js?ts=" + ts;
+      jqueryJS.defer = true;
+      document.getElementsByTagName("HEAD")[0].appendChild(jqueryJS);
+      if (devMode) {
+          let jqueryMigrateJS =  document.createElement("script");
+          jqueryMigrateJS.type = "text/javascript";
+          jqueryMigrateJS.src = jsHost + "jquery-migrate.js?ts=" + ts;
+          jqueryMigrateJS.defer = true;
+          document.getElementsByTagName("HEAD")[0].appendChild(jqueryMigrateJS);
+      }
+      startJS.type = "text/javascript";
+      startJS.src = jsHost + "start.js?ts=" + ts;
+      startJS.crossOrigin = "anonymous";
+      startJS.defer = true;
+      document.getElementsByTagName("HEAD")[0].appendChild(startJS);
+  </script>
+  <!--======================================-->
+  <!-- END • VLOOK plugin_live for <head /> -->
+  <!--======================================-->
+</head>
